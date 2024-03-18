@@ -10,6 +10,7 @@ public class Mamifero extends Animal{
     private int patas = 0;
 
     public Mamifero (){
+        this(null, 0, null, null, false, 0);
     }
 
     public Mamifero(String nombre, int edad, String habitat, String genero, boolean pelaje, int patas) {
@@ -58,4 +59,5 @@ public class Mamifero extends Animal{
     public static void setListado(ArrayList<Mamifero> listado) {
         Mamifero.listado = listado;
     }
+
 }

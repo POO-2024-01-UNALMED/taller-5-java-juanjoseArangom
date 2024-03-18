@@ -10,6 +10,7 @@ public class Animal {
     private Zona zona;
 
     public Animal() {
+        this(null, 0, null, null);
         totalAnimales++;
     }
 
@@ -18,6 +19,7 @@ public class Animal {
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
+        this.zona = null;
         totalAnimales++;
     }
 
@@ -29,17 +31,20 @@ public class Animal {
     }
 
     public static String totalPorTipo() {
-        return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\nAves: " + Ave.cantidadAves() + "\nReptiles: " +
-                Reptil.cantidadReptiles() + "\nPeces: " + Pez.cantidadPeces() + "\nAnfibios: " + Anfibio.cantidadAnfibios();
+        return "Mamiferos: "+Mamifero.getListado().size()+"\n"+
+                "Aves: "+Ave.getListado().size()+"\n"+
+                "Reptiles: "+Reptil.getListado().size()+"\n" +
+                "Peces: " +Pez.getListado().size()+"\n"+
+                "Anfibios: "+Anfibio.getListado().size();
     }
 
     public String toString() {
-        if (zona == null) {
-            return "Mi nombre es " + getNombre() + "\nMi edad es " + getEdad() + "\nMi habitat es " + getHabitat() + "\nMi genero es " + getGenero();
+        if (getZona() == null) {
+            return "Mi nombre es " + getNombre() + ", tengo una edad de "  + getEdad() + ", habito en" + getHabitat() + " y mi genero es " + getGenero();
         }
         else {
-            return "Mi nombre es " + getNombre() + "\nMi edad es " + getEdad() + "\nMi habitat es " + getHabitat() + "\nMi genero es " + getGenero() +
-                    "la zona en la que me ubico es " + getZona().getNombre() + ", en el zoo " + getZona().getZoo().getNombre();
+            return "Mi nombre es " + getNombre() + ", tengo una edad de "  + getEdad() + ", habito en" + getHabitat() + " y mi genero es " + getGenero() +
+                    ", la zona en la que me ubico es " + getZona().getNombre() + ", en el " + getZona().getZoo().getNombre();
         }
     }
 

@@ -9,6 +9,7 @@ public class Anfibio extends Animal{
     private boolean venenoso;
 
     public Anfibio() {
+        this(null, 0, null, null, null, false);
     }
 
     public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
@@ -30,13 +31,13 @@ public class Anfibio extends Animal{
         return anfibio;
     }
 
-    public static int cantidadAnfibios(){
+    public int cantidadAnfibios(){
         return Anfibio.listado.size();
     }
 
     @Override
     public String movimiento(){
-        return "Saltar";
+        return "saltar";
     }
 
     public static void setListado(ArrayList<Anfibio> listado){
