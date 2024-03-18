@@ -43,6 +43,24 @@ public class Anfibio extends Animal{
         Anfibio.listado = listado;
     }
 
-    
+    public static ArrayList<Anfibio> getListado() {
+        return listado;
+    }
+
+    public void setColorPiel(String colorPiel){
+        this.colorPiel = colorPiel;
+    }
+
+    public String getColorPiel(){
+        return this.colorPiel;
+    }
+
+    public boolean isVenenoso(){
+        return this.venenoso;
+    }
+
+    public void setVenenoso(boolean venenoso){
+        this.venenoso = venenoso;
+    }
 
 }
