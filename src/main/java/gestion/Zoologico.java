@@ -26,11 +26,11 @@ public class Zoologico {
         zonas.add(zona);
     }
 
-    public ArrayList<Zona> getZonas() {
+    public ArrayList<Zona> getZona() {
         return zonas;
     }
 
-    public void setZonas(ArrayList<Zona> zonas) {
+    public void setZona(ArrayList<Zona> zonas) {
         this.zonas = zonas;
     }
 
