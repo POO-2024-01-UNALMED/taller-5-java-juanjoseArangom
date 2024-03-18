@@ -21,6 +21,13 @@ public class Animal {
         totalAnimales++;
     }
 
+    public static void setTotalAnimales(int totalAnimales) {
+        Animal.totalAnimales=totalAnimales;
+    }
+    public static int getTotalAnimales() {
+        return totalAnimales;
+    }
+
     public static String totalPorTipo() {
         return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\nAves: " + Ave.cantidadAves() + "\nReptiles: " +
                 Reptil.cantidadReptiles() + "\nPeces: " + Pez.cantidadPeces() + "\nAnfibios: " + Anfibio.cantidadAnfibios();
@@ -28,11 +35,11 @@ public class Animal {
 
     public String toString() {
         if (zona == null) {
-            return "Mi nombre es " + nombre + "\nMi edad es " + edad + "\nMi habitat es " + habitat + "\nMi genero es " + genero;
+            return "Mi nombre es " + getNombre() + "\nMi edad es " + getEdad() + "\nMi habitat es " + getHabitat() + "\nMi genero es " + getGenero();
         }
         else {
-            return "Mi nombre es " + nombre + "\nMi edad es " + edad + "\nMi habitat es " + habitat + "\nMi genero es " + genero +
-                    "la zona en la que me ubico es " + zona.getNombre() + ", en el zoo " + zona.getZoo().getNombre();
+            return "Mi nombre es " + getNombre() + "\nMi edad es " + getEdad() + "\nMi habitat es " + getHabitat() + "\nMi genero es " + getGenero() +
+                    "la zona en la que me ubico es " + getZona().getNombre() + ", en el zoo " + getZona().getZoo().getNombre();
         }
     }
 
