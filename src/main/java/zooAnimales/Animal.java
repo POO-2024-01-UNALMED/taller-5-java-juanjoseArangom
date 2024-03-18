@@ -40,10 +40,10 @@ public class Animal {
 
     public String toString() {
         if (getZona() == null) {
-            return "Mi nombre es " + getNombre() + ", tengo una edad de "  + getEdad() + ", habito en" + getHabitat() + " y mi genero es " + getGenero();
+            return "Mi nombre es " + getNombre() + ", tengo una edad de "  + getEdad() + ", habito en " + getHabitat() + " y mi genero es " + getGenero();
         }
         else {
-            return "Mi nombre es " + getNombre() + ", tengo una edad de "  + getEdad() + ", habito en" + getHabitat() + " y mi genero es " + getGenero() +
+            return "Mi nombre es " + getNombre() + ", tengo una edad de "  + getEdad() + ", habito en " + getHabitat() + " y mi genero es " + getGenero() +
                     ", la zona en la que me ubico es " + getZona().getNombre() + ", en el " + getZona().getZoo().getNombre();
         }
     }
